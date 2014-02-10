@@ -8,8 +8,9 @@ cpext: cpext.o
 	$(CC) obj/cpext.o -o cpext $(LDFLAGS)
 
 cpext.o: src/cpext.c
+	mkdir obj
 	$(CC) $(CFLAGS) src/cpext.c -o obj/cpext.o
 
 clean:
-	rm -rf obj/*o cpext
+	rm -rf obj/ cpext
 
